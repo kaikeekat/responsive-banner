@@ -6,6 +6,7 @@
 
 html {
   box-sizing: border-box;
+  overflow: hidden;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -17,28 +18,61 @@ html {
   box-sizing: inherit;
 }
 
-.banner {
+.img-flex {
+  display: block;
+  width: 100%;
+}
+
+img {
   max-height: 500px;
+}
+
+.banner {
   background-color: #495562;
   color: #efefef;
 }
 
 .banner-content {
-
-  max-height: 500px;
   background-color: #495562;
   color: #efefef;
 }
 
 .btn {
   background-color: #495562;
-  border-color:#97a49b;
+  border-color: #97a49b;
   border-radius: 3px;
 }
 
 @media only screen and (min-width: 60em) {
 
-  .btn {
+  img {
+    max-height: none;
+  }
 
+  .banner {
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .banner-content {
+    position: absolute;
+    bottom: 0;
+    color: #efefef;
+    background: none;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(73, 85, 98, 0), rgba(73, 85, 98, .8));
+  }
+
+  .text {
+    display: inline-block;
+    max-width: 50em;
+  }
+
+  .btn {
+    display: inline-block;
+    background: none;
+    border-color: #fff;
+    max-width: 25em;
   }
 }
