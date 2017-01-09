@@ -18,18 +18,27 @@ html {
 }
 
 .banner {
-  max-height: 24em;
+  max-height: 500px;
   background-color: #495562;
-  color: #fff;
+  color: #efefef;
 }
 
 .banner-content {
-  
 
+  max-height: 500px;
+  background-color: #495562;
+  color: #efefef;
 }
 
 .btn {
   background-color: #495562;
   border-color:#97a49b;
   border-radius: 3px;
+}
+
+@media only screen and (min-width: 60em) {
+
+  .btn {
+
+  }
 }
